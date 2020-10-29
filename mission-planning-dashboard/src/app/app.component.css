@@ -1,4 +1,13 @@
 .box {
   display: flex;
-  padding: 10px;
+  flex-flow: row wrap;
+  width: 75%;
+  padding: 3%;
+  margin: 0 auto;
+  box-shadow: 4px 5px 5px 3px #d9dddc;
+  border-radius: 15px;
+}
+
+.box > * {
+  margin: 0 auto;
 }
