@@ -1,3 +1,4 @@
+// import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -27,5 +28,11 @@ export class EquipmentComponent implements OnInit {
    ngOnInit() { }
 
    // Code your addItem function here:
-   
+   addItem(equipment: object) {
+    this.cargoHold.push(equipment);
+    this.cargoMass += equipment['mass'];
+    if(this.maximumAllowedMass - this.cargoMass <= 200) {
+      return true;
+    }
+   }
 }
